@@ -75,7 +75,7 @@ public class AddExpense extends Application implements Initializable {
         }
     }
     //combobox sql connection
-    public void buildData() {
+    public void buildData(){
         data = FXCollections.observableArrayList();
         connection = dbConnection.getConnection();
         Classification classification = null;
