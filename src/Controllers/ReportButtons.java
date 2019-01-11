@@ -56,10 +56,12 @@ public class ReportButtons {
 
     public void goToReportClassification(ActionEvent actionEvent) {
         reportClassification = new ReportClassification();
+        reportClassification.show();
     }
 
     public void goToReportDate(ActionEvent actionEvent) {
         reportDate = new ReportDate();
+        reportDate.show();
     }
 
     public void close(){

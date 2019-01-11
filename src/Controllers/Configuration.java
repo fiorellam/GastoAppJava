@@ -54,7 +54,7 @@ public class Configuration  {
             Connection connect = dbConnection.getConnection();
             PreparedStatement sqlStatement = connect.prepareStatement(sqlUpdate);
             sqlStatement.execute();
-            connect.close();
+
         }catch (SQLException e){
             e.printStackTrace();
         }

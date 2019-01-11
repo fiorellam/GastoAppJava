@@ -35,16 +35,22 @@ public class AddExpense extends Application implements Initializable {
     @FXML private TextField tf_concept;
     @FXML private TextField tf_amount;
     @FXML private ComboBox<Classification> c_box_classification;
-    ArrayList<String> list_classification_string;
+    //ArrayList<String> list_classification_string;
     ArrayList<Classification> classification_list_classification;
     ObservableList<Classification> data;
-
-
+    ArrayList<Expense> expense_list_expense;
+    ObservableList<Expense> data_expense;
+    double sum_amount_actual_limit;
     Configuration config;
     ReportButtons reportButtons;
     ClassificationView classificationView;
     Stage primarStage;
 //    ClassificationButtons classificationButtons;
+
+    int actual_limit_contador, classification_limi_contador;
+    double amount_double;
+    double limiteActual;
+    double limiteTotal;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -116,6 +122,7 @@ public class AddExpense extends Application implements Initializable {
     }
 
     public void save(MouseEvent mouseEvent) {
+        Connection connect = dbConnection.getConnection();
         String classification_name_string = String.valueOf(c_box_classification.getSelectionModel().getSelectedItem());
         String concept_string = tf_concept.getText();
         String amount_string = tf_amount.getText();
@@ -123,26 +130,89 @@ public class AddExpense extends Application implements Initializable {
         Classification s = c_box_classification.getSelectionModel().getSelectedItem();
         int selectedid = s.getClassification_id();
         String selectedname = s.getNamee();
+        limiteActual = s.getActual_limit();
+        limiteTotal = s.getLimitt();
 //        System.out.println(concept_string + "  " + amount_string + " " + classification_name_string);
+        System.out.println("idclassification " + selectedid + " nameclass: " + selectedname + "limite_Actual " + limiteActual + "limiteTotal " + limiteTotal);
 
 
         if(!classification_name_string.equals("") && !concept_string.equals("") && !amount_string.equals("")){
             String date = setDate();
-            double amount_double = Double.parseDouble(amount_string);
+            amount_double = Double.parseDouble(amount_string);
+            buildDataGeneralReport(selectedid);
+
             String sqlInsert = "INSERT INTO expense (concept_name, amount, dateb, classification_id) VALUES (?,?,?,?)";
             try{
+//                connect = dbConnection.getConnection();
+
+                sum_amount_actual_limit =amount_double+limiteActual;
+                System.out.println(" esta es la suma antes de: " + sum_amount_actual_limit);
                 System.out.println("concepto:"+ concept_string+ "amount: " + amount_double+ "date:" + date+ "SELECTED ID" + selectedid );//+ "  " +selectedname + " " + classification_name_string
-                Connection connect = dbConnection.getConnection();
-                PreparedStatement sqlStatement = connect.prepareStatement(sqlInsert);
-                sqlStatement.setString(1,concept_string);
-                sqlStatement.setDouble(2,amount_double);
-                sqlStatement.setString(3,date );
-                sqlStatement.setInt(4,selectedid);
-                sqlStatement.execute();
-                connect.close();
+//                if(sum_amount_actual_limit<limiteActual){
+//                    Connection connect = dbConnection.getConnection();
+                    PreparedStatement sqlStatement = connect.prepareStatement(sqlInsert);
+                    sqlStatement.setString(1,concept_string);
+                    sqlStatement.setDouble(2,amount_double);
+                    sqlStatement.setString(3,date );
+                    sqlStatement.setInt(4,selectedid);
+                    sqlStatement.execute();
+
+
+//                    try{
+//                        String update = "UPDATE classification set actual_limit = '" + sum_amount_actual_limit + "' where classification_id = '" + selectedid + "'";
+//
+//
+//                        Connection connectttt = dbConnection.getConnection();
+//                        PreparedStatement ps = connectttt.prepareStatement("UPDATE classification set actual_limit = '" + sum_amount_actual_limit + "' where classification_id = '" + selectedid + "'");
+//                        ps.setDouble(3, sum_amount_actual_limit);
+//                        ps.executeUpdate();
+//                        ps.close();
+//                        connectttt.close();
+//                    }catch (SQLException e){
+//                        e.printStackTrace();
+//                    }
+
+//                    }
+//                    connect.close();
+//                }
+                //TODO obtener este amount y sumarselo al limite actual
+//                if(suma_concepto+limiteActual<limiteTotal){
+//                    se hace insercion
+//                }
+
+
             }catch (SQLException e){
                 e.printStackTrace();
             }
+        }
+    }
+    public void buildDataGeneralReport(int classification_id){
+        data_expense = FXCollections.observableArrayList();
+        connection = dbConnection.getConnection();
+        Expense expense = null;
+        expense_list_expense = new ArrayList<>();
+
+        try {
+            String SQL = "select * from expense where classification_id =" + classification_id;
+            ResultSet rs = connection.createStatement().executeQuery(SQL);
+            while(rs.next()){
+                expense = new Expense();
+                expense.set_id(rs.getInt("expense_id"));
+                expense.set_concept(rs.getString("concept_name"));
+                expense.set_amount(rs.getDouble("amount"));
+                expense.set_date(rs.getString("dateb"));
+                expense.set_classification(rs.getInt("classification_id"));
+
+                data_expense.add(expense);
+                System.out.println("data EXPENSE: " + data_expense);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error Building Expense Data");
+        }
+        if (connection == null) {
+            System.exit(1);
+            System.out.println("Connection failed");
         }
     }
 
