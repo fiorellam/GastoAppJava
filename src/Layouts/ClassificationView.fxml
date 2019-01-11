@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controllers.ClassificationView"
+            prefHeight="437.0" prefWidth="637.0">
+
+    <children>
+        <Label layoutX="220.0" layoutY="26.0" prefHeight="44.0" prefWidth="199.0" text="Clasificaciones" textAlignment="CENTER">
+            <font>
+                <Font size="28.0" />
+            </font>
+        </Label>
+        <ListView layoutX="37.0" layoutY="82.0" prefHeight="274.0" prefWidth="564.0" />
+        <Button layoutX="184.0" layoutY="372.0" mnemonicParsing="false" text="AÑADIR NUEVA CLASIFICACIÓN">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+    </children>
+
+</AnchorPane>

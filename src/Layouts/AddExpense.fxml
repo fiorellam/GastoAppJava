@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="437.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddExpense">
+   <children>
+      <Label layoutX="213.0" layoutY="32.0" text="GastoApp">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+       <Label layoutX="132.0" layoutY="149.0" text="Concepto:">
+           <font>
+               <Font size="20.0" />
+           </font>
+       </Label>
+       <TextField fx:id="tf_concept" layoutX="231.0" layoutY="145.0" prefHeight="31.0" prefWidth="288.0" />
+       <Label layoutX="132.0" layoutY="202.0" text="Monto:">
+           <font>
+               <Font size="20.0" />
+           </font>
+       </Label>
+       <TextField fx:id="tf_amount" layoutX="230.0" layoutY="201.0" prefHeight="31.0" prefWidth="288.0" />
+       <Label layoutX="132.0" layoutY="256.0" text="Clasificación:">
+           <font>
+               <Font size="20.0" />
+           </font>
+       </Label>
+      <ComboBox fx:id="c_box_classification" layoutX="277.0" layoutY="256.0" prefWidth="150.0" />
+      <Button layoutX="255.0" layoutY="322.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="97.0" text="Guardar" onMouseClicked="#save"/>
+      <Button layoutX="493.0" layoutY="17.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="113.0" text="Clasificacion" onAction="#goToClassificationView"/>
+      <Button layoutX="493.0" layoutY="52.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="113.0" text="Reportes" onAction="#goToReportButtons" />
+      <Button layoutX="493.0" layoutY="88.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="113.0" text="Configuracion" onAction="#goToConfiguration" />
+   </children>
+</AnchorPane>
