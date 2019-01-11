@@ -42,23 +42,17 @@ public class Configuration  {
 //        if(!classification_name_string.equals("") && !concept_string.equals("") && !amount_string.equals("")){
 //            String date = setDate();
 //            TODO: Insertar nuevo limite
-        String sqlInsert = "INSERT INTO general_configuration (general_limit) VALUES (?)";
+        String sqlUpdate = "update general_configuration set general_limit =" + general_limit_int;
         try{
-            Connection connect = dbConnection.getConnection();
-            PreparedStatement sqlStatement = connect.prepareStatement(sqlInsert);
-            sqlStatement.setInt(1,general_limit_int);
 
+            Connection connect = dbConnection.getConnection();
+            PreparedStatement sqlStatement = connect.prepareStatement(sqlUpdate);
             sqlStatement.execute();
             connect.close();
         }catch (SQLException e){
             e.printStackTrace();
         }
-        }
-
-//        Notifications
-
-//    }
-
+    }
 
     public void show() {
         try {

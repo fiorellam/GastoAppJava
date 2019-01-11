@@ -2,6 +2,7 @@ package Controllers;
 
 import DatabaseConnection.dbConnection;
 import Model.Classification;
+import Model.Expense;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -123,13 +124,14 @@ public class AddExpense extends Application implements Initializable {
         int selectedid = s.getClassification_id();
         String selectedname = s.getNamee();
 //        System.out.println(concept_string + "  " + amount_string + " " + classification_name_string);
-        System.out.println("SELECTED ID" + selectedid + "  " +selectedname + " " + classification_name_string);
+
 
         if(!classification_name_string.equals("") && !concept_string.equals("") && !amount_string.equals("")){
             String date = setDate();
             double amount_double = Double.parseDouble(amount_string);
             String sqlInsert = "INSERT INTO expense (concept_name, amount, dateb, classification_id) VALUES (?,?,?,?)";
             try{
+                System.out.println("concepto:"+ concept_string+ "amount: " + amount_double+ "date:" + date+ "SELECTED ID" + selectedid );//+ "  " +selectedname + " " + classification_name_string
                 Connection connect = dbConnection.getConnection();
                 PreparedStatement sqlStatement = connect.prepareStatement(sqlInsert);
                 sqlStatement.setString(1,concept_string);
@@ -142,14 +144,12 @@ public class AddExpense extends Application implements Initializable {
                 e.printStackTrace();
             }
         }
-
     }
 
     public void goToReportButtons(ActionEvent actionEvent) {
          reportButtons = new ReportButtons();
          reportButtons.show();
     }
-
     public void goToClassificationView(ActionEvent actionEvent) {
         classificationView = new ClassificationView();
         classificationView.show();

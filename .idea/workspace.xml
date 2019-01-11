@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d23e547d-c141-4944-a63c-57746009e27c" name="Default Changelist" comment="" />
+    <list default="true" id="d23e547d-c141-4944-a63c-57746009e27c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GastoAppJ/Controllers/AddExpense.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GastoAppJ/Controllers/AddExpense.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GastoAppJ/GastoAppJava.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GastoAppJ/GastoAppJava.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/AddExpense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/AddExpense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GastoAppJava.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/GastoAppJava.db" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,31 +47,32 @@
         <counts>
           <entry key="db" value="1" />
           <entry key="fxml" value="21" />
-          <entry key="java" value="29" />
-          <entry key="sql" value="1" />
+          <entry key="java" value="30" />
+          <entry key="sql" value="2" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="29" />
+          <entry key="JAVA" value="30" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Scratch" value="1" />
-          <entry key="XML" value="21" />
+          <entry key="Scratch" value="2" />
+          <entry key="XML" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
           <entry key="fxml" value="389" />
-          <entry key="java" value="3005" />
-          <entry key="sql" value="138" />
+          <entry key="java" value="3124" />
+          <entry key="sql" value="345" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3005" />
+          <entry key="JAVA" value="3124" />
           <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Scratch" value="138" />
+          <entry key="Scratch" value="345" />
           <entry key="XML" value="389" />
         </counts>
       </usages-collector>
@@ -75,11 +83,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controllers/AddExpense.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="155" column="28" selection-start-line="155" selection-start-column="28" selection-end-line="155" selection-end-column="28" />
+            <state relative-caret-position="83">
+              <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/Configuration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-181">
+              <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/08948de4-21c3-45ca-aaf4-6cd453e27577/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-432">
+              <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -140,16 +169,17 @@
       <find>classificationButtonsStage</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/DatabaseConnection/AdminSQLiteOpenHelper.java" />
         <option value="$PROJECT_DIR$/src/DatabaseConnection/dbConnection.java" />
         <option value="$PROJECT_DIR$/src/Controllers/Toast.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/Configuration.java" />
         <option value="$PROJECT_DIR$/src/Model.java" />
         <option value="$PROJECT_DIR$/src/Model/Expense.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/08948de4-21c3-45ca-aaf4-6cd453e27577/console.sql" />
         <option value="$PROJECT_DIR$/src/Layouts/Configuration.fxml" />
         <option value="$PROJECT_DIR$/src/Layouts/ClassificationButtons.fxml" />
         <option value="$PROJECT_DIR$/src/Controllers/ClassificationButtons.java" />
@@ -164,6 +194,8 @@
         <option value="$PROJECT_DIR$/src/Controllers/ReportButtons.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ClassificationView.java" />
         <option value="$PROJECT_DIR$/src/Layouts/ReportButtons.fxml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/08948de4-21c3-45ca-aaf4-6cd453e27577/console.sql" />
+        <option value="$PROJECT_DIR$/src/Controllers/Configuration.java" />
         <option value="$PROJECT_DIR$/src/Controllers/AddExpense.java" />
       </list>
     </option>
@@ -179,6 +211,7 @@
     <option name="width" value="1520" />
     <option name="height" value="1039" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -242,8 +275,8 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547172813848" />
-    <property name="database.console.LAST_STATE" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547178053267" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="D:/Users/Fiorella/Desktop/controlsfx-8.0.1-sources.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -294,12 +327,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547135245986</updated>
-      <workItem from="1547135249880" duration="27064000" />
+      <workItem from="1547135249880" duration="31528000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27064000" />
+    <option name="totallyTimeSpent" value="31528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -310,17 +343,17 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18791947" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18791947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" weight="0.32991204" />
       <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32991204" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info active="true" anchor="bottom" id="Database Console" visible="true" weight="0.32991204" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40762463" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40762463" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -329,7 +362,7 @@
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" weight="0.2147651" />
+      <window_info anchor="right" id="Database" visible="true" weight="0.2147651" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -404,25 +437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/08948de4-21c3-45ca-aaf4-6cd453e27577/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="82" lean-forward="true" selection-end-line="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1981#1982#0" expanded="true" />
-            <element signature="e#2011#2012#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -578,20 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ReportGeneral.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ReportDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/ReportClassification.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -611,10 +611,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ReportGeneral.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ReportDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-181">
+          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/08948de4-21c3-45ca-aaf4-6cd453e27577/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/AddExpense.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="155" column="28" selection-start-line="155" selection-start-column="28" selection-end-line="155" selection-end-column="28" />
+        <state relative-caret-position="83">
+          <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
