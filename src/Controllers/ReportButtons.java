@@ -1,6 +1,7 @@
 package Controllers;
 
 import DatabaseConnection.dbConnection;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -12,6 +13,9 @@ import java.sql.Connection;
 public class ReportButtons {
     Connection connection;
     Stage reportButtonsStage;
+    ReportGeneral reportGeneral;
+    ReportClassification reportClassification;
+    ReportDate reportDate;
 
 
     public void CheckConnection() {
@@ -42,6 +46,20 @@ public class ReportButtons {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+    }
+
+    public void goToReportGeneral(ActionEvent actionEvent) {
+        reportGeneral = new ReportGeneral();
+        reportGeneral.show();
+
+    }
+
+    public void goToReportClassification(ActionEvent actionEvent) {
+        reportClassification = new ReportClassification();
+    }
+
+    public void goToReportDate(ActionEvent actionEvent) {
+        reportDate = new ReportDate();
     }
 
     public void close(){

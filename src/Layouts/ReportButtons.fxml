@@ -7,17 +7,17 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReportButtons">
    <children>
-      <Button layoutX="221.0" layoutY="81.0" mnemonicParsing="false" text="REPORTE GENERAL">
+      <Button layoutX="221.0" layoutY="81.0" mnemonicParsing="false" text="REPORTE GENERAL" onAction="#goToReportGeneral">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="181.0" layoutY="173.0" mnemonicParsing="false" text="REPORTE POR CLASIFICACION">
+      <Button layoutX="181.0" layoutY="173.0" mnemonicParsing="false" text="REPORTE POR CLASIFICACION" onAction="#goToReportClassification">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="213.0" layoutY="274.0" mnemonicParsing="false" text="REPORTE POR FECHA">
+      <Button layoutX="213.0" layoutY="274.0" mnemonicParsing="false" text="REPORTE POR FECHA" onAction="#goToReportDate">
          <font>
             <Font size="16.0" />
          </font>

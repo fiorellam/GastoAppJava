@@ -26,7 +26,7 @@ public class ClassificationView implements Initializable {
     Stage classificationViewStage;
     ArrayList<Classification> classification_list_classification;
     AddClassification addClassification;
-    ObservableList list = FXCollections.observableArrayList();
+//    ObservableList list = FXCollections.observableArrayList();
 
     @FXML private ListView<Classification> listView_classification;
     ObservableList<Classification> data;

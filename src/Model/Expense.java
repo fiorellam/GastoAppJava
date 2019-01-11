@@ -72,4 +72,9 @@ public class Expense implements Serializable {
     public void set_date(String _date) {
         this._date = _date;
     }
+
+    @Override
+    public String toString() {
+        return this._concept + "               " + this._amount + "             " + this._date ;
+    }
 }
