@@ -27,7 +27,8 @@
             </font>
         </Label>
       <ComboBox fx:id="combo_class" layoutX="41.0" layoutY="70.0" prefHeight="31.0" prefWidth="208.0" />
-      <Button layoutX="489.0" layoutY="70.0" mnemonicParsing="false" text="Buscar" onAction="#searchByClassification" />
+      <Button layoutX="489.0" layoutY="70.0" mnemonicParsing="false" onAction="#searchByClassification" text="Buscar" />
+      <!--<Button layoutX="489.0" layoutY="351.0" mnemonicParsing="false" text="Limpiar" onAction="#deleteListView"/>-->
     </children>
 
 </AnchorPane>

@@ -20,7 +20,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -33,6 +35,8 @@ public class ReportClassification implements Initializable {
     @FXML ComboBox<Classification> combo_class;
     ArrayList<Classification> classification_list_classification;
     ObservableList<Classification> data;
+
+    ObservableList<Expense> data_expense = FXCollections.observableArrayList();
 
 
     public void CheckConnection() {
@@ -111,9 +115,7 @@ public class ReportClassification implements Initializable {
 //            String date2_string = date2.getValue().toString();
             if(!classification_name.equals("")){
                 consultExpenseListByClassification(selectedid);
-//                double amount = getTotal(date1_string, date2_string);
-//                lbl_total_date.setText(String.valueOf(amount));
-//                System.out.println("FECHA 1 " + date1_string + "FECHA 2 " + date2_string);
+                lbl_total_classification.setText(String.valueOf(getTotal(selectedid)));
             }
 
         }catch (Exception ex){
@@ -124,8 +126,6 @@ public class ReportClassification implements Initializable {
 
     public void consultExpenseListByClassification(int classification_id){
         ArrayList<Expense> expense_list_expense;
-        ObservableList<Expense> data_expense;
-        data_expense = FXCollections.observableArrayList();
         connection = dbConnection.getConnection();
         Expense expense = null;
         expense_list_expense = new ArrayList<>();
@@ -154,5 +154,29 @@ public class ReportClassification implements Initializable {
             System.exit(1);
             System.out.println("Connection failed");
         }
+    }
+
+    public double getTotal(int classification_id){
+        double amount=0;
+        try{
+        String query = "select sum(amount) from expense where classification_id =" + classification_id;
+
+            connection = dbConnection.getConnection();
+            PreparedStatement ps = connection.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                amount= rs.getDouble(1);
+            }
+//            System.out.println(String.valueOf(amount));
+        }catch (SQLException e){
+            System.err.println(e);
+        }
+        return amount;
+    }
+
+    public void deleteListView(ActionEvent actionEvent) {
+//        listView_classification.refresh();
+        data_expense.removeAll();
+        this.listView_classification.getItems().addAll(data_expense);
     }
 }
