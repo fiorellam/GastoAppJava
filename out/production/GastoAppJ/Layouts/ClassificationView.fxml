@@ -19,7 +19,7 @@
             </font>
         </Label>
         <ListView layoutX="37.0" layoutY="82.0" prefHeight="274.0" prefWidth="564.0" />
-        <Button layoutX="184.0" layoutY="372.0" mnemonicParsing="false" text="AÑADIR NUEVA CLASIFICACIÓN">
+        <Button layoutX="184.0" layoutY="372.0" mnemonicParsing="false" text="AÑADIR NUEVA CLASIFICACIÓN" onAction="#goToAddClassification">
             <font>
                 <Font size="16.0" />
             </font>

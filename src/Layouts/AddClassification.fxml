@@ -13,18 +13,19 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <TextField layoutX="293.0" layoutY="111.0" />
+        
         <Label layoutX="173.0" layoutY="174.0" text="Limite:">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-        <TextField layoutX="293.0" layoutY="172.0" />
-        <Button layoutX="264.0" layoutY="272.0" mnemonicParsing="false" text="GUARDAR">
+        <TextField fx:id="tf_limit" layoutX="293.0" layoutY="172.0" />
+        <Button layoutX="264.0" layoutY="272.0" mnemonicParsing="false" onAction="#saveClassification" text="GUARDAR">
             <font>
                 <Font size="16.0" />
             </font>
         </Button>
+      <TextField fx:id="tf_classification" layoutX="293.0" layoutY="111.0" />
     </children>
 
 </AnchorPane>

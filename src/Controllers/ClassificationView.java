@@ -13,6 +13,7 @@ import java.sql.Connection;
 public class ClassificationView {
     Connection connection;
     Stage classificationViewStage;
+    AddClassification addClassification;
 
 
     public void CheckConnection() {
@@ -44,8 +45,14 @@ public class ClassificationView {
             ex.printStackTrace();
         }
     }
+    public void goToAddClassification(ActionEvent actionEvent) {
+        addClassification = new AddClassification();
+        addClassification.show();
+    }
 
     public void close(){
         this.classificationViewStage.close();
     }
+
+
 }
