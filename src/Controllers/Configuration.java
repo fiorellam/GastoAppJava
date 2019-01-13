@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -43,20 +44,29 @@ public class Configuration  {
     public void save(ActionEvent actionEvent) {
         CheckConnection();
         String general_limit_string = tf_general_limit.getText();
-        int general_limit_int = Integer.parseInt(general_limit_string);
+        double general_limit_int = Double.parseDouble(general_limit_string);
         System.out.println(general_limit_string);
+        if(!general_limit_string.equals("")) {
 //        if(!classification_name_string.equals("") && !concept_string.equals("") && !amount_string.equals("")){
 //            String date = setDate();
 //            TODO: Insertar nuevo limite
-        String sqlUpdate = "update general_configuration set general_limit =" + general_limit_int;
-        try{
+            String sqlUpdate = "update general_configuration set general_limit =" + general_limit_int;
+            try {
 
-            Connection connect = dbConnection.getConnection();
-            PreparedStatement sqlStatement = connect.prepareStatement(sqlUpdate);
-            sqlStatement.execute();
+                Connection connect = dbConnection.getConnection();
+                PreparedStatement sqlStatement = connect.prepareStatement(sqlUpdate);
+                sqlStatement.execute();
 
-        }catch (SQLException e){
-            e.printStackTrace();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            Alert notification = new Alert(Alert.AlertType.CONFIRMATION);
+            notification.setContentText("Limite General agregado");
+            notification.show();
+        }else {
+            Alert notification = new Alert(Alert.AlertType.ERROR);
+            notification.setContentText("Debes llenar el campo limite");
+            notification.show();
         }
     }
 

@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -137,6 +138,7 @@ public class AddExpense extends Application implements Initializable {
 
 
         if(!classification_name_string.equals("") && !concept_string.equals("") && !amount_string.equals("")){
+
             String date = setDate();
             amount_double = Double.parseDouble(amount_string);
             buildDataGeneralReport(selectedid);
@@ -184,6 +186,15 @@ public class AddExpense extends Application implements Initializable {
             }catch (SQLException e){
                 e.printStackTrace();
             }
+
+            Alert notification = new Alert(Alert.AlertType.CONFIRMATION);
+            notification.setContentText("Gasto Agregado");
+            notification.show();
+        }
+        else {
+            Alert notification = new Alert(Alert.AlertType.ERROR);
+            notification.setContentText("Debes llenar todos los campos");
+            notification.show();
         }
     }
     public void buildDataGeneralReport(int classification_id){
@@ -227,5 +238,16 @@ public class AddExpense extends Application implements Initializable {
     public void goToConfiguration(ActionEvent actionEvent) {
         config = new Configuration();
         config.show();
+    }
+    public static boolean isNumeric(String cadena){
+        boolean result;
+        try{
+            Double.parseDouble(cadena);
+            result = true;
+
+        }catch (NumberFormatException excepcion){
+            result = false;
+        }
+        return result;
     }
 }

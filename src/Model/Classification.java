@@ -11,8 +11,25 @@ public class Classification implements Serializable {
 
     private Integer classification_id;
     private String namee;
-    private Integer limitt;
-    private Integer actual_limit;
+
+    public double getLimitt() {
+        return limitt;
+    }
+
+    public void setLimitt(double limitt) {
+        this.limitt = limitt;
+    }
+
+    public double getActual_limit() {
+        return actual_limit;
+    }
+
+    public void setActual_limit(double actual_limit) {
+        this.actual_limit = actual_limit;
+    }
+
+    private double limitt;
+    private double actual_limit;
 
     /**
      * Constructor para Classification
@@ -48,16 +65,16 @@ public class Classification implements Serializable {
         this.namee = namee;
     }
 
-    public Integer getLimitt() {
-        return limitt;
-    }
+//    public Integer getLimitt() {
+//        return limitt;
+//    }
 
     public void setLimitt(Integer limitt) {
         this.limitt = limitt;
     }
-    public Integer getActual_limit() {
-        return actual_limit;
-    }
+//    public Integer getActual_limit() {
+//        return actual_limit;
+//    }
 
     public void setActual_limit(Integer actual_limit) {
         this.actual_limit = actual_limit;

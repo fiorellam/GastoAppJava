@@ -18,7 +18,7 @@
                 <Font size="28.0" />
             </font>
         </Label>
-        <ListView fx:id="listView_classification" layoutX="37.0" layoutY="82.0" prefHeight="274.0" prefWidth="564.0" />
+        <ListView fx:id="listView_classification" layoutX="37.0" layoutY="82.0" prefHeight="274.0" prefWidth="564.0" onMouseClicked="#handleMouseClick"/>
         <Button layoutX="184.0" layoutY="372.0" mnemonicParsing="false" text="AÑADIR NUEVA CLASIFICACIÓN" onAction="#goToAddClassification">
             <font>
                 <Font size="16.0" />

@@ -14,13 +14,13 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="267.0" layoutY="94.0" />
+      <TextField fx:id="tf_classification_name" layoutX="267.0" layoutY="94.0" />
       <Label layoutX="147.0" layoutY="157.0" text="Limite:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="267.0" layoutY="155.0" />
+      <TextField fx:id="tf_classification_limit" layoutX="267.0" layoutY="155.0" />
       <Button layoutX="147.0" layoutY="261.0" mnemonicParsing="false" text="GUARDAR">
          <font>
             <Font size="16.0" />

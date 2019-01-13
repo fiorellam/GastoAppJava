@@ -5,11 +5,13 @@ import Model.Classification;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -99,5 +101,17 @@ public class ClassificationView implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         buildDataListView();
+    }
+    @FXML
+    public void handleMouseClick(MouseEvent mouseEvent) {
+        Classification s = listView_classification.getSelectionModel().getSelectedItem();
+        int c_id = s.getClassification_id();
+        s.getLimitt();
+        s.getNamee();
+        System.out.println(s.getClassification_id() + " " + s.getLimitt() + "  " + s.getNamee());
+//        EditClassification edit = new EditClassification(s.getClassification_id(), s.getLimitt(), s.getNamee());
+        EditClassification edit = new EditClassification();
+        edit.show();
+        edit.sendInfo(s.getClassification_id(), s.getLimitt(),s.getNamee());
     }
 }

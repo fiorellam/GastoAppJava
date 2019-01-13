@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -76,6 +77,13 @@ public class AddClassification {
             }catch (SQLException e){
                 e.printStackTrace();
             }
+            Alert notification = new Alert(Alert.AlertType.CONFIRMATION);
+            notification.setContentText("Clasificacion Agregada");
+            notification.show();
+        }else {
+            Alert notification = new Alert(Alert.AlertType.ERROR);
+            notification.setContentText("Debes llenar todos los campos");
+            notification.show();
         }
     }
 }
